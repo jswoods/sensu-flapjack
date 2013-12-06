@@ -1,0 +1,16 @@
+{
+  "client": {
+    "name": "test-host",
+    "address": "10.6.64.36",
+    "subscriptions": [
+      "linux"
+    ],
+    "safe_mode": false,
+    "check_disk_threshold": {
+      "space_critical": "5%",
+      "space_warning": "10%",
+      "inode_critical": "5%",
+      "inode_warning": "10%"
+    }
+  }
+}

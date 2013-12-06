@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "check_disk": {
+      "aggregate": false,
+      "handlers": [
+        "flapjack"
+      ],
+      "command": "/usr/lib64/nagios/plugins/check_disk -w :::check_disk_threshold.space_warning::: -c :::check_disk_threshold.space_critical::: -W :::check_disk_threshold.inode_warning::: -K :::check_disk_threshold.inode_critical::: -p /",
+      "occurrences": 0,
+      "subscribers": [
+        "linux"
+      ],
+      "refresh": 10,
+      "type": "metric",
+      "standalone": false,
+      "interval": 300
+    }
+  }
+}
