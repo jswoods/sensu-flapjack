@@ -25,7 +25,7 @@ class SendToFlapjack < Sensu::Handler
 
   def handle
     config = Flapjack::Configuration.new
-    config.load('/etc/flapjack/config.yaml')
+    config.load('/etc/flapjack/flapjack_config.yaml')
     config_env = config.all
 
     if config_env.nil? || config_env.empty?
@@ -37,7 +37,6 @@ class SendToFlapjack < Sensu::Handler
     redis_options = config.for_redis
     redis = Redis.new(redis_options)
 
-    object_type = 'SERVICEPERFDATA'
     timestamp = @event['check']['issued']
     entity = @event['client']['name'] 
     check = @event['check']['name'] 
