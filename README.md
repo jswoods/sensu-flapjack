@@ -1,4 +1,4 @@
 sensu-flapjack
 ==============
 
-Experimenting with a sensu integration for http://flapjack.io/.
+This project is inactive. The sensu extension for flapjack has been merged into [sensu community plugins](https://github.com/sensu/sensu-community-plugins).
